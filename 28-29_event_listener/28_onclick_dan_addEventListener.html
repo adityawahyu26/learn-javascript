@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick dan addEventListener</title>
+</head>
+
+<body>
+
+    <section id="main">
+        <!-- onclick -->
+        <p id="ukuran">text paragraf pertama</p>
+        <button type="submit" onclick="ubahUkuran()">ubah ukuran</button>
+
+        <!-- addEventListener -->
+        <p id="warna">text paragraf kedua</p>
+        <button id="button">ubah warna</button>
+    </section>
+
+    <script>
+        // onclick
+        const ukuran = document.getElementById("ukuran");
+        function ubahUkuran() {
+            ukuran.style.fontSize = "9px";
+        }
+
+        // addEventListener
+        const warna = document.getElementById("warna");
+        const button = document.getElementById("button");
+
+        function ubahWarna() {
+            warna.style.color = "blue";
+        }
+
+        button.addEventListener("click", ubahWarna);
+    </script>
+
+</body>
+
+</html>
