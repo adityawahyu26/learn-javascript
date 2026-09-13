@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property inner</title>
+</head>
+
+<body>
+
+    <h3 id="p1">ini adalah paragraf 1</h3>
+    <h3 id="p2">ini adalah paragraf 2</h3>
+    <script>
+        let pr1 = document.getElementById("p1");
+        let pr2 = document.getElementById("p2");
+
+        pr1.innerText = "ini adalah paragraf 1 versi baru";
+        pr2.innerHTML = `<h1>ini adalah paragraf 2 versi baru</h1>`;
+    </script>
+
+</body>
+
+</html>
