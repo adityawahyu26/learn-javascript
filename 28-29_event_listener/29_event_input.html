@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event input</title>
+    <style>
+        .main {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        input {
+            width: 200px;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <input type="text" id="input">
+        <p id="output"></p>
+    </div>
+
+    <script>
+        const input = document.getElementById("input");
+        const output = document.getElementById("output");
+
+        function type() {
+            output.innerHTML = input.value;
+        }
+
+        input.addEventListener("input", type);
+    </script>
+
+</body>
+
+</html>
