@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classlist toggle</title>
+    <style>
+        .dark-sea {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="main">
+    <button type="submit" onclick="ubahMode()">Dark Mode</button>
+    <h2>Judul Article</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, eaque suscipit ab veritatis excepturi
+        dignissimos quaerat exercitationem earum asperiores dolorum.</p>
+
+    <script>
+        let main = document.getElementById("main");
+
+        function ubahMode() {
+            main.classList.toggle("dark-sea");
+        }
+    </script>
+</body>
+
+</html>
