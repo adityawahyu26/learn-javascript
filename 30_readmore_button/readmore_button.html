@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readmore button</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .more-button {
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi velit eius quisquam error enim autem
+            dignissimos reprehenderit pariatur est?.</p>
+
+        <p id="moreText" class="hidden">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione architecto
+            odit perferendis
+            sit, quo,
+            eveniet vitae odio accusantium porro labore, dolorum distinctio ipsam eum. Sit beatae accusantium laudantium
+            quam quas tempore quasi odio voluptate nulla libero harum laborum voluptatibus dolor iste iusto magni ea
+            molestiae accusamus, ratione dolorem! Eum ab dolorum eveniet quam provident aspernatur, aut inventore, ipsa
+            repellat officia expedita facilis rerum nemo amet necessitatibus assumenda obcaecati tempora voluptatem
+            architecto sequi consequuntur labore facere corporis laboriosam? Dolore iste ipsum eius. Vero, inventore
+            ducimus voluptates dolore incidunt, nihil, eveniet porro veniam dicta commodi similique fugit sequi quidem
+            quaerat facilis ab?</p>
+
+        <span class="more-button" id="moreButton">...Selengkapnya</span>
+    </section>
+
+    <script>
+        const moreText = document.getElementById("moreText");
+        const moreButton = document.getElementById("moreButton");
+
+        function tampilkanText() {
+            if (moreText.classList.contains("hidden")) {
+                moreText.classList.remove("hidden");
+                moreButton.innerHTML = "Sembunyikan";
+            } else {
+                moreText.classList.add("hidden");
+                moreButton.innerHTML = "...Selengkapnya";
+            }
+        }
+
+        moreButton.addEventListener("click", tampilkanText);
+    </script>
+
+</body>
+
+</html>
