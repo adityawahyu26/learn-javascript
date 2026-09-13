@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+
+<body>
+    <section id="main"></section>
+
+    <script>
+        const main = document.getElementById("main");
+
+        const judul = document.createElement("h2");
+        judul.textContent = "Judul Artikel";
+
+        const paragraf = document.createElement("p");
+        paragraf.textContent = "ini adalah isi dalam paragraf";
+
+        main.append(judul, paragraf);
+
+    </script>
+</body>
+
+</html>
