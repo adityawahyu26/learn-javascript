@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="gambar" src="image/about-1.jfif" alt="about-1"><br>
+    <button type="submit" onclick="ubahGambar()">Ubah Gambar</button>
+
+    <script>
+        let gambar = document.getElementById("gambar");
+
+        function ubahGambar() {
+            gambar.setAttribute("src", "image/catalog.jfif")
+        }
+    </script>
+
+</body>
+
+</html>
