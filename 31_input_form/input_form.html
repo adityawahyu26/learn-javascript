@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+</head>
+
+<body>
+    <form action="">
+        <p><input type="text" id="nama" placeholder="Masukkan Nama Anda"></p>
+        <p><input type="text" id="alamat" placeholder="Masukkan Alamat Anda"></p>
+    </form>
+    <p>Nama : <span id="output-nama"></span></p>
+    <p>Alamat : <span id="output-alamat"></span></p>
+
+    <script>
+        let inputNama = document.getElementById("nama");
+        let inputAlamat = document.getElementById("alamat");
+        let namaOutput = document.getElementById("output-nama");
+        let alamatOutput = document.getElementById("output-alamat");
+
+        inputNama.addEventListener("input", function () {
+            namaOutput.textContent = inputNama.value
+        });
+
+        inputAlamat.addEventListener("input", function () {
+            alamatOutput.textContent = inputAlamat.value
+        });
+    </script>
+</body>
+
+</html>
