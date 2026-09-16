@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String</title>
+</head>
+
+<body>
+    <input type="text" id="nama" placeholder="Masukkan Nama Anda : " required><br>
+    <input type="text" id="alamat" placeholder="Masukkan Alamat Anda : " required><br>
+    <button type="submit" id="kirim">Kirim</button>
+    <h1 id="output"></h1>
+
+    <script>
+        const nama = document.getElementById("nama");
+        const alamat = document.getElementById("alamat");
+        const kirim = document.getElementById("kirim");
+        const output = document.getElementById("output");
+
+        function tulisPerkenalan() {
+            output.textContent = `Perkenalkan nama saya ${nama.value}, dan saya berasal dari ${alamat.value}.`
+        }
+
+        kirim.addEventListener("click", tulisPerkenalan);
+    </script>
+</body>
+
+</html>
