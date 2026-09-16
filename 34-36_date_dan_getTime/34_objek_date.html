@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objek Date</title>
+</head>
+
+<body>
+    <p id="time"></p>
+    <script>
+        const time = document.getElementById("time");
+        const waktu = new Date;
+        const hour = waktu.getHours();
+        const minute = waktu.getMinutes();
+        const second = waktu.getSeconds();
+
+        time.textContent = `${hour}:${minute}:${second}`;
+    </script>
+</body>
+
+</html>
