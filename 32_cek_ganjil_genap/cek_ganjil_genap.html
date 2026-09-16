@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Ganjil Genap</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        input {
+            width: 200px;
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="cek" placeholder="Masukkan Angka"><br>
+    <button type="submit" id="cekBtn">Cek Angka</button>
+    <p id="output-text"></p>
+    <script>
+        function cekAngka() {
+            let cek = Number(document.getElementById("cek").value);
+            let cekBtn = document.getElementById("cekBtn");
+            let outputText = document.getElementById("output-text");
+
+            if (isNaN(cek)) {
+                outputText.textContent = "Masukkan Angka yang valid!";
+            } else if (cek % 2 === 0) {
+                outputText.textContent = "Angka ini adalah Genap!!"
+            } else {
+                outputText.textContent = "Angka ini adalah Ganjil!!"
+            }
+        }
+
+        cekBtn.addEventListener("click", cekAngka);
+    </script>
+</body>
+
+</html>
