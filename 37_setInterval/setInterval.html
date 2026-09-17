@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+
+<body>
+    <p id="number"></p>
+    <script>
+        const number = document.getElementById("number");
+        let i = -2;
+
+        function hitung() {
+            i += 2;
+            number.textContent = i;
+
+            if (i === 20) {
+                clearInterval(interval);
+                number.textContent = "selamat anda berhasil!!";
+            }
+        }
+        const interval = setInterval(hitung, 1000);
+        hitung();
+    </script>
+</body>
+
+</html>
