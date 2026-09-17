@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Undangan Digital</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .cover {
+            background: url(snezhnaya.jfif) center/cover no-repeat;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .cover.hide {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        #coverText {
+            color: white;
+            box-shadow: 2px 2px 2px black;
+            text-align: center;
+        }
+
+        #undanganBtn {
+            padding: 10px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .main {
+            display: none;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .main.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover" id="cover">
+        <h1 id="coverText">Surat Undangan Pernikahan</h1>
+        <button id="undanganBtn">Buka</button>
+    </div>
+
+    <div class="main" id="main">
+        <h3>Untuk Keluarga dan Sahabat Terdekat</h3>
+        <p>Indonesia, 23 september 2036</p>
+        <p>Salam Hormat, Keluarga Mempelai.</p>
+    </div>
+
+    <script>
+        const cover = document.getElementById('cover');
+        const main = document.getElementById('main');
+        const btn = document.getElementById('undanganBtn');
+
+        btn.addEventListener('click', () => {
+            cover.classList.add('hide');
+            main.classList.add('show');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+</body>
+
+</html>
