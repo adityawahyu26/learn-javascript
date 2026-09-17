@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tebak Angka</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            let angkaBenar = Math.floor(Math.random() * 10) + 1;
+            let tebakAngka = prompt("Tebak Angka 1-10 : ");
+
+            if (parseInt(tebakAngka) === angkaBenar) {
+                alert("Selamat jawaban anda benar!!");
+            } else {
+                alert(`Jawaban anda salah!!, jawaban yang benar adalah ${angkaBenar}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
