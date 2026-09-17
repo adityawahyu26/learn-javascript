@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getTime</title>
+</head>
+
+<body>
+    <p id="time"></p>
+    <script>
+        const time = document.getElementById("time");
+        const date = new Date();
+        const awal = new Date("sep 17, 2026");
+        const akhir = new Date("dec 16, 2026");
+        const selisih = akhir.getTime() - awal.getTime();
+        const hari = selisih / (1000 * 60 * 60 * 24);
+
+        time.textContent = `sisa harinya adalah ${hari} hari lagi`;
+
+    </script>
+</body>
+
+</html>
