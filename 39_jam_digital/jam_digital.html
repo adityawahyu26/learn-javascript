@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jam Digital</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #jam-digital {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #timer {
+            color: lime;
+            font-size: 50px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="jam-digital">
+        <h1 id="timer">00:00:00</h1>
+    </div>
+    <script>
+        const timer = document.getElementById("timer");
+
+        function jamDigital() {
+            let date = new Date();
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+
+            if (hour < 10) {
+                hour = "0" + hour;
+            } else {
+                hour = hour;
+            }
+
+            if (minute < 10) {
+                minute = "0" + minute;
+            } else {
+                minute = minute;
+            }
+
+            if (second < 10) {
+                second = "0" + second;
+            } else {
+                second = second;
+            }
+
+            timer.textContent = `${hour}:${minute}:${second}`;
+        }
+
+        setInterval(jamDigital, 1000)
+        jamDigital();
+
+    </script>
+</body>
+
+</html>
