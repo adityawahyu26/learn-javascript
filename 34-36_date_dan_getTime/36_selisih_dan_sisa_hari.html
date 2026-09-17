@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selisih dan Sisa Hari</title>
+</head>
+
+<body>
+    <p id="sisa-hari"></p>
+    <script>
+        const sisaHari = document.getElementById("sisa-hari");
+        const date = new Date();
+        const target = new Date("dec 16, 2026");
+        const totalSelisih = target.getTime() - date.getTime();
+        const totalSisaHari = Math.floor(totalSelisih / (1000 * 60 * 60 * 24));
+
+        sisaHari.textContent = `total sisa harinya adalah ${totalSisaHari} hari lagi.`;
+    </script>
+</body>
+
+</html>
